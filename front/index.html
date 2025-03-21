@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda d'Événements Éco-Conçu</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Agenda d'Événements</h1>
+
+    <!-- Liste des événements -->
+    <ul id="event-list"></ul>
+
+    <!-- Formulaire d'ajout d'événement -->
+    <form id="event-form">
+        <label for="title">Titre :</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="location">Lieu :</label>
+        <input type="text" id="location" name="location" required>
+
+        <button type="submit">Ajouter l'événement</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>

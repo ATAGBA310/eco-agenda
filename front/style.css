@@ -18,9 +18,16 @@ form {
     gap: 10px;
 }
 
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
 input, button {
     padding: 8px;
     font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
@@ -28,7 +35,6 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
 }
 
 ul {
@@ -41,4 +47,19 @@ li {
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 5px;
+    }
+
+    form input, form button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    li {
+        font-size: 12px;
+    }
 }

@@ -1,9 +1,9 @@
-// front/app.js (côté client)
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('event-form');
     const eventList = document.getElementById('event-list');
 
-    // Charge les événements depuis l'API
+    
     fetch('/api/events')
         .then(response => response.json())
         .then(events => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const location = document.getElementById('location').value;
 
         if (title && date && location) {
-            // Envoie l'événement au serveur
+            
             fetch('/api/events', {
                 method: 'POST',
                 headers: {
@@ -43,16 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Appel API pour récupérer les événements au chargement de la page
+
 document.addEventListener('DOMContentLoaded', () => {
     const eventList = document.getElementById('event-list');
 
-    // Récupérer les événements via l'API
+    
     fetch('http://localhost:3000/api/events')
         .then(response => response.json())
         .then(events => {
             events.forEach(event => {
-                // Affichage des événements dans la liste
+                
                 const li = document.createElement('li');
                 li.textContent = `${event.title} - ${event.date} - ${event.location}`;
                 eventList.appendChild(li);
